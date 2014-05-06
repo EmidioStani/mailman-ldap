@@ -10,8 +10,8 @@ The original script has been taken from http://www.warden.pl/2010/02/01/synchron
 
 Differences from the original are:
 
-1. put in variable mailman path bin and list
+1. put in variableq mailman path bin and list
 2. changed attribute mailGroup to groupOfUniqueNames and added search for mail attribute on group
 3. changed condition on user search (removing the locking condition)
-4. changed the fact that the email of the group is not anymore added to the group itself
+4. now the email of the group is not anymore added to the group itself
 
