@@ -52,7 +52,7 @@ foreach my $group ($ret->entries) {
     # make a list of emails to pass to mailman from member objects
     foreach my $member_dn (@member_list) {
 
-            my $person = $ldap->search(  base  => $member_dn, filter => "(&(mail=*))"  );
+            my $person = $ldap->search(  base  => $member_dn, filter => "(&(mail=*)(!(ds-pwp-account-disabled=*)))"  );
             # try to get the referred object, or continue if locked account or object does not exist # 
             if (my $member = $person->entry(0)) {
                my $member_name =  $member ->get_value("cn");
