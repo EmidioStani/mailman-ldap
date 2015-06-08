@@ -3,7 +3,7 @@ mailman-ldap
 
 Perl script to extract ldap groups and users and add them in mailman
 
-The script searches for groupOfUniqueNames groups and it verify that the attribute mail for the groups exists.
+The script searches for groupOfUniqueNames groups and it verifies that the attribute mail for the groups exists.
 If it exist it searches for the users belonging to the group by looking for the attribute uniqueMember, the user found is added to the list if it has a mail attribute set and it is not disabled ( looking for ds-pwp-account-disabled attribute specific to OpenDJ, in other cases you could use the attribute pwdAccountLockedTime).
 
 The original script has been taken from http://www.warden.pl/2010/02/01/synchronizing-mailman-lists-with-ldap/
